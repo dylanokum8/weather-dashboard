@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row">
             <div class="col-4">
-                <p class="search-header my-2">
+                <p class="search-header my-2 text-primary">
                     Search the weather of a city
                 </p>
                 <div class="input">
@@ -27,16 +27,18 @@
                         </button>
                     </div>
                 </div>
-         </div>
-                            <div class="col-8">
-                            <div class="row mr-0">
-                            <div class="col-12 border border-dark m-3 rounded">
-                            <div class="row">
-                            <div class="col-12">
+                <div class="col-8">
+                <div id="today" class="text-primary">
+                    <script> 
+                        document.getElementById("today").innerHTML = Date();
+                
+                    </script>
+                </div>
+                
+        
+                            
                                 <span id="city-name" class="city-name align-middle"></span>
-                                <img id="icon-pic" src="placeholder" alt="">
-                            </div>
-                            </div>
+                                
                         <div class="row">
                             <div class="col-12">
                                 <p id="temperature"></p>
@@ -59,6 +61,7 @@
                         </div>
                     </div>
                 </div>
+            
                     <div class="row">
                     <div class="col-12">
                         <h2>5 Day Forecast</h2>
@@ -75,7 +78,7 @@
                     </div>
                     </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js""></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="./assets/js/script.js"></script>
 
 
