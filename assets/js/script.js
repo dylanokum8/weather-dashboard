@@ -1,12 +1,14 @@
-var cityEl = document.getElementById("search-input");
-var searchEl = document.getElementById("search-button");
-var nameEl = document.getElementById("city-name");
-var tempEl = document.getElementById("temperature");
-var windEl = document.getElementById("wind-speed");
-var humidityEl = document.getElementById("humidity");
-var uvEl = document.getElementById("uv-index");
+var cityEl = document.querySelector("#city-input");
+var stateEl = document.querySelector("#state-input")
+var searchEl = document.querySelector("#search-button");
+var nameEl = document.querySelector("#city-name");
+var tempEl = document.querySelector("#temperature");
+var windEl = document.querySelector("#wind-speed");
+var humidityEl = document.querySelector("#humidity");
+var uvEl = document.querySelector("#uv-index");
 var searchedCities = [];
-
+var cityShown = document.getElementById(nameEl, stateEl);
+    var stateShown = document.getElementById(state);
 
 var today = new Date();
 var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
@@ -16,10 +18,26 @@ var dateTime = date+' '+time;
 
 
 
-var getWeather = function(cityName) {
-const cityShown = document.getElementById("city-name")
-
-cityShown.textContent = city
-
-fetch
+var coordinates = function(city) {
+    var cityShown = document.getElementById(nameEl, stateEl);
+    var stateShown = document.getElementById(state);
+   console.log(state);
+    
+var apiKey = "7492c99df1255804add346c7d2d387af";
+var apiUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "," + state + ",USA&appid=" + apiKey;
+fetch(apiUrl)
+.then(function(response) {
+    if (response.ok) { 
+        response.json().then(function(data) {
+            
+        })}
 }
+)
+// console.log(data);
+
+
+}
+
+// var getWeather = function()
+// var apiKey = "7492c99df1255804add346c7d2d387af";
+// var apiUrl = "https://api.openweathermap.org/data/2.5/onecall?lat" + latitude + "&lon=" + longitude + "&exclude=hourly,minutely&appid=" + apiKey;
